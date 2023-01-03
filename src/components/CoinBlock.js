@@ -9,7 +9,10 @@ const coinBlock = ({ coins }) => {
     <div>
       <h1>{name}</h1>
       <h2>{symbol}</h2>
-      <h2>{priceUsd}</h2>
+      <h2>
+        $
+        {Number(priceUsd).toFixed(3)}
+      </h2>
     </div>
   );
 };

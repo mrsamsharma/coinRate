@@ -1,24 +1,20 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchCoins } from '../redux/home/home';
-import CoinBlock from '../components/CoinBlock';
+import React from 'react';
+import CategoryBox from '../components/CategoryBox';
 
 const Home = () => {
-  const coins = useSelector((state) => state.cryptoCoins);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (coins.length === 0) {
-      dispatch(fetchCoins());
-    }
-  }, [dispatch, coins.length]);
+  const categories = [
+    { id: '1', range: '0 - 10' },
+    { id: '2', range: '10 - 100' },
+    { id: '3', range: '100 - 1000' },
+    { id: '4', range: '1000 - 20000' },
+  ];
 
   return (
     <div>
-      {coins.map((coin) => (
-        <CoinBlock
-          key={coin.id}
-          coins={coin}
+      {categories.map((category) => (
+        <CategoryBox
+          key={category.id}
+          range={category.range}
         />
       ))}
     </div>
