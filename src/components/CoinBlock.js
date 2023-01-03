@@ -1,13 +1,13 @@
 import React from 'react';
 
-const coinBlock = ({ coin }) => {
+const coinBlock = ({ coins }) => {
   const {
-    id, name, symbol, priceUsd,
-  } = coin;
+    name, symbol, priceUsd,
+  } = coins;
 
   return (
     <div>
-      <h1 id={id}>{name}</h1>
+      <h1>{name}</h1>
       <h2>{symbol}</h2>
       <h2>{priceUsd}</h2>
     </div>

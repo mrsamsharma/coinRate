@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCoins } from '../redux/home/home';
+import CoinBlock from '../components/CoinBlock';
 
 const Home = () => {
   const coins = useSelector((state) => state.cryptoCoins);
@@ -13,7 +14,14 @@ const Home = () => {
   }, [dispatch, coins.length]);
 
   return (
-    <></>
+    <div>
+      {coins.map((coin) => (
+        <CoinBlock
+          key={coin.id}
+          coins={coin}
+        />
+      ))}
+    </div>
   );
 };
 
