@@ -2,7 +2,8 @@ import React from 'react';
 
 const coinBlock = ({ coins }) => {
   const {
-    name, symbol, priceUsd,
+    // eslint-disable-next-line camelcase
+    name, symbol, current_price,
   } = coins;
 
   return (
@@ -11,7 +12,7 @@ const coinBlock = ({ coins }) => {
       <h2>{symbol}</h2>
       <h2>
         $
-        {Number(priceUsd).toFixed(3)}
+        {Number(current_price).toFixed(3)}
       </h2>
     </div>
   );
