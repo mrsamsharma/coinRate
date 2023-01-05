@@ -28,15 +28,18 @@ const Home = () => {
 
   return (
     <div>
-      {categories.map((category) => (
-        <CategoryBox
-          key={category.id}
-          range={category.range}
-          id={category.id}
-          max={category.max}
-          min={category.min}
-        />
-      ))}
+      <p>Stats by price</p>
+      <div className="category-grid">
+        {categories.map((category) => (
+          <CategoryBox
+            key={category.id}
+            range={category.range}
+            id={category.id}
+            max={category.max}
+            min={category.min}
+          />
+        ))}
+      </div>
     </div>
   );
 };

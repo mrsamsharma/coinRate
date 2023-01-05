@@ -17,12 +17,14 @@ const CategoryBox = (props) => {
   ));
 
   return (
-    <div className="category-box">
-      <h2>Cryptocurrencies</h2>
-      <p>{range}</p>
+    <div className="category-box" onClick={() => dispatch(updateCategory({ min, max }))} onKeyDown={() => dispatch(updateCategory({ min, max }))} role="presentation">
       <NavLink id={id} onClick={() => dispatch(updateCategory({ min, max }))} className="forward-btn" to="/Coins" />
-      <i className="coin" />
-      <p>{countC.length}</p>
+      {/* <i className="coin" /> */}
+      <p className="coin-name">
+        Cryptocurrencies from $
+        {range}
+      </p>
+      <p className="coins-length">{countC.length}</p>
     </div>
   );
 };
