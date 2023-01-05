@@ -7,7 +7,7 @@ import { detailCoin } from '../redux/detail/detail';
 const CoinBlock = ({ coin }) => {
   const {
     // eslint-disable-next-line camelcase
-    id, name, symbol, current_price,
+    id, name, current_price,
   } = coin;
 
   const dispatch = useDispatch();
@@ -17,14 +17,15 @@ const CoinBlock = ({ coin }) => {
   };
 
   return (
-    <div className="category-box">
+    <div className="coin-box">
       <h1>{name}</h1>
-      <h2>{symbol}</h2>
-      <h2>
-        $
-        {Number(current_price).toFixed(3)}
-      </h2>
-      <NavLink id={id} className="forward-btn" to="/Detail" onClick={handleClick} />
+      <div className="coin-price-wrapper">
+        <h2>
+          $
+          {Number(current_price).toFixed(3)}
+        </h2>
+        <NavLink id={id} className="forward-btn-coin" to="/Detail" onClick={handleClick} />
+      </div>
     </div>
   );
 };

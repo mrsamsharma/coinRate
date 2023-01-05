@@ -14,7 +14,7 @@ const Coins = () => {
 
   return (
     <div>
-      <p>CyptoCurrencies Price Breakdown</p>
+      <p className="coin-heading">CyptoCurrencies Price Breakdown</p>
       {coins.map((coin) => (
         <CoinBlock
           key={coin.id}
