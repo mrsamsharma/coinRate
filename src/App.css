@@ -27,3 +27,15 @@
   height: 124px;
   display: block;
 }
+
+.coin-icon {
+  width: 100px;
+}
+
+.details-wrapper {
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #dd2166;
+  color: #fff;
+}

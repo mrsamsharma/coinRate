@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCoins } from '../redux/app/app';
 
 import CategoryBox from '../components/CategoryBox';
 
@@ -17,6 +19,12 @@ const Home = () => {
       id: '4', range: '1000 - 20000', min: '1000', max: '20000',
     },
   ];
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCoins());
+  }, [dispatch]);
 
   return (
     <div>

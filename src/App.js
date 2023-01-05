@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Coins from './pages/Coins';
+import Detail from './pages/Detail';
 import './App.css';
-import { fetchCoins } from './redux/app/app';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchCoins());
-  }, [dispatch]);
-
   return (
     <div className="App">
       <Routes>
         <Route index element={<Home />} />
         <Route path="/Coins" element={<Coins />} />
+        <Route path="/Detail" element={<Detail />} />
       </Routes>
     </div>
   );

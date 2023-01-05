@@ -17,7 +17,7 @@ const Coins = () => {
       {coins.map((coin) => (
         <CoinBlock
           key={coin.id}
-          coins={coin}
+          coin={coin}
         />
       ))}
     </div>
