@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { detailCoin } from '../redux/detail/detail';
 
 const CoinBlock = ({ coin }) => {
   const {
     // eslint-disable-next-line camelcase
     id, name, current_price,
   } = coin;
-
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch(detailCoin(coin));
-  };
 
   return (
     <div className="coin-box">
@@ -24,7 +16,7 @@ const CoinBlock = ({ coin }) => {
           $
           {Number(current_price).toFixed(3)}
         </h3>
-        <NavLink id={id} className="forward-btn-coin" to="/Detail" onClick={handleClick} />
+        <NavLink id={id} className="forward-btn-coin" to={`/detail/${id}`} />
       </div>
     </div>
   );

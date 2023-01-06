@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/Coins" element={<Coins />} />
-        <Route path="/Detail" element={<Detail />} />
+        <Route path="/coins" element={<Coins />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </div>
   );

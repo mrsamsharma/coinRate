@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -17,8 +16,8 @@ const CategoryBox = (props) => {
   ));
 
   return (
-    <NavLink className="category-box" onClick={() => dispatch(updateCategory({ min, max }))} onKeyDown={() => dispatch(updateCategory({ min, max }))} role="presentation" to="/Coins">
-      <NavLink id={id} onClick={() => dispatch(updateCategory({ min, max }))} className="forward-btn" to="/Coins" />
+    <NavLink id={id} className="category-box" onClick={() => dispatch(updateCategory({ min, max }))} onKeyDown={() => dispatch(updateCategory({ min, max }))} role="presentation" to="/coins">
+      <i className="forward-btn" />
       <i className="bitcoin-tag" />
       <p className="coin-name">
         Cryptocurrencies from $

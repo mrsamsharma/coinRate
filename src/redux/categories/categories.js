@@ -1,6 +1,6 @@
 export const updateCategory = (payload) => ({ type: 'FILTER', payload });
 
-const initialState = { min: '100', max: '1000' };
+const initialState = { min: '0', max: '10' };
 
 const activeCategories = (state = initialState, action) => {
   switch (action.type) {

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoins } from '../redux/app/app';
 import CategoryBox from '../components/CategoryBox';
+import { updateCategory } from '../redux/categories/categories';
 
 const Home = () => {
   const categories = [
@@ -22,6 +24,7 @@ const Home = () => {
   const coins = useSelector((state) => state.coinCounter);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCoins());
@@ -41,6 +44,16 @@ const Home = () => {
           &nbsp;
           Coins
         </p>
+        <select onChange={(e) => {
+          dispatch(updateCategory({ min: e.target.value.split('-')[0], max: e.target.value.split('-')[1] }));
+          navigate('/coins');
+        }}
+        >
+          <option aria-label="$1-$10" defaultValue="Choose Price Category" disabled>Choose Price Category</option>
+          {categories.map((category) => (
+            <option key={category.id} aria-label={`$${category.min}-$${category.max}`} value={`${category.min}-${category.max}`}>{`$${category.min}-$${category.max}`}</option>
+          ))}
+        </select>
       </div>
       <p className="coin-heading">Stats by price</p>
       <div className="category-grid">

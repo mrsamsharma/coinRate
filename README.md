@@ -3,6 +3,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
   - [🚀 Live Demo](#live-demo)
+  -[📄 Presentation](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -32,7 +33,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://)
+- [Live Demo Link](https://coinrate.onrender.com)
+
+## 📄 Presentation <a name="presentation"></a>
+
+- [Loom Link](https://www.loom.com/share/a4aa2958465c41e89d3fd267ba7638b1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +126,7 @@ If you like this project you can star it :)
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse
+I would like to thank Nelson Sakwa for the design of this app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

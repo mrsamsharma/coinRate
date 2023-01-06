@@ -203,6 +203,17 @@ body {
   padding: 10px;
 }
 
+.loading-gif {
+  display: block;
+  margin: auto;
+  width: 50%;
+  min-width: 150px;
+  background: url(./assets/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+}
+
 @media only screen and (min-width: 768px) {
   .details-container h2 {
     font-size: 24px;
