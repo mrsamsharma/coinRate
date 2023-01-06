@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoins } from '../redux/app/app';
-
 import CategoryBox from '../components/CategoryBox';
 
 const Home = () => {
