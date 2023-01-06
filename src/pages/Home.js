@@ -49,7 +49,7 @@ const Home = () => {
           navigate('/coins');
         }}
         >
-          <option aria-label="$1-$10" defaultValue="Choose Price Category" disabled>Choose Price Category</option>
+          <option aria-label="$1-$10" defaultValue="Choose Price Category" disabled selected>Choose Price Category</option>
           {categories.map((category) => (
             <option key={category.id} aria-label={`$${category.min}-$${category.max}`} value={`${category.min}-${category.max}`}>{`$${category.min}-$${category.max}`}</option>
           ))}
