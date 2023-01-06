@@ -14,6 +14,21 @@ const Coins = () => {
 
   return (
     <div>
+      <div className="coins-category-box">
+        <i className="coin" />
+        <p className="coin-name">
+          Cryptocurrencies $
+          {category.min}
+          -
+          $
+          {category.max}
+        </p>
+        <p className="coins-length">
+          {coins.length}
+          &nbsp;
+          Coins
+        </p>
+      </div>
       <p className="coin-heading">CyptoCurrencies Price Breakdown</p>
       {coins.map((coin) => (
         <CoinBlock

@@ -9,7 +9,7 @@ const CategoryBox = (props) => {
   const coins = useSelector((state) => state.coinCounter);
   const dispatch = useDispatch();
   const {
-    range, id, min, max,
+    id, min, max,
   } = props;
 
   const countC = coins.filter((coin) => (
@@ -17,21 +17,25 @@ const CategoryBox = (props) => {
   ));
 
   return (
-    <div className="category-box" onClick={() => dispatch(updateCategory({ min, max }))} onKeyDown={() => dispatch(updateCategory({ min, max }))} role="presentation">
+    <NavLink className="category-box" onClick={() => dispatch(updateCategory({ min, max }))} onKeyDown={() => dispatch(updateCategory({ min, max }))} role="presentation" to="/Coins">
       <NavLink id={id} onClick={() => dispatch(updateCategory({ min, max }))} className="forward-btn" to="/Coins" />
-      {/* <i className="coin" /> */}
+      <i className="bitcoin-tag" />
       <p className="coin-name">
         Cryptocurrencies from $
-        {range}
+        {min}
+        -
+        $
+        {max}
       </p>
       <p className="coins-length">{countC.length}</p>
-    </div>
+    </NavLink>
   );
 };
 
 export default CategoryBox;
 
 CategoryBox.propTypes = {
-  range: PropTypes.string.isRequired,
+  min: PropTypes.string.isRequired,
+  max: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };

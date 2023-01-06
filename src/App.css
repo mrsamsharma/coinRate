@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #fd5294;
+}
+
 .forward-btn {
   background: url(./assets/forward-button.svg)  no-repeat center center/cover;
   width: 24px;
@@ -53,28 +57,46 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #dd2166;
+  background-color: #ce4177;
   padding: 10px 10px;
 }
 
 .category-box {
   display: flex;
   flex-direction: column;
-  background-color: #fc4f91;
+  background-color: #fd5294;
   color: #fff;
   text-align: right;
   padding: 10px;
+  text-decoration: none;
 }
 
-.category-box:nth-child(odd) {
-  background-color: #dd2166;
+.category-box:nth-child(3) {
+  background-color: #ce4177;
+}
+
+.category-box:nth-child(2) {
+  background-color: #ce4177;
 }
 
 .coin {
-  background: url(./assets/coin.svg)  no-repeat center center/cover;
-  width: 124px;
-  height: 124px;
+  background: url(./assets/line.png)  no-repeat center center/cover;
+  width: 280px;
+  height: 121px;
   display: block;
+}
+
+.coin-box-heading {
+  font-size: 20px;
+}
+
+.bitcoin-tag {
+  display: block;
+  align-self: center;
+  background: url(./assets/grapy-bitcoin-price-tag.png)  no-repeat center center/cover;
+  background-size: contain;
+  width: 145px;
+  height: 90px;
 }
 
 .coin-icon {
@@ -86,7 +108,7 @@
   padding: 25px 50px;
   display: flex;
   flex-direction: column;
-  background-color: #dd2166;
+  background-color: #ce4177;
   color: #fff;
   height: 100vh;
   align-items: center;
@@ -99,45 +121,60 @@
 .details-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 7px;
   margin-top: 10px;
 }
 
+.details-container h2 {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
 .coin-heading {
-  background-color: #dd2166;
+  background-color: #ce4177;
   color: #fff;
   font-size: 20px;
   padding: 3px 10px;
 }
 
 .category-grid {
-  /* display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 80px 200px; */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 .coin-name {
-  font-size: 25px;
+  font-size: 16px;
   font-weight: 800;
   margin: 2px;
 }
 
+.coin-name-home {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 2px;
+  text-align: center;
+}
+
 .coins-length {
+  color: rgb(39, 28, 28);
   font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
   margin: 0;
 }
 
 .coin-box {
   display: flex;
   justify-content: space-between;
-  background-color: #fc4f91;
+  background-color: #fd5294;
   color: #fff;
   text-align: right;
   padding: 40px 10px;
 }
 
-.coin-box:nth-child(odd) {
-  background-color: #dd2166;
+.coin-box:nth-child(even) {
+  background-color: #ce4177;
 }
 
 .coin-price-wrapper {
@@ -153,4 +190,15 @@
   height: 24px;
   display: block;
   cursor: pointer;
+}
+
+.coins-category-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fc4f91;
+  color: #fff;
+  padding: 10px;
 }

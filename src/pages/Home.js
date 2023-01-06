@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoins } from '../redux/app/app';
 
 import CategoryBox from '../components/CategoryBox';
@@ -7,18 +7,20 @@ import CategoryBox from '../components/CategoryBox';
 const Home = () => {
   const categories = [
     {
-      id: '1', range: '0 - 10', min: '0', max: '10',
+      id: '1', min: '0', max: '10',
     },
     {
-      id: '2', range: '10 - 100', min: '10', max: '100',
+      id: '2', min: '10', max: '100',
     },
     {
-      id: '3', range: '100 - 1000', min: '100', max: '1000',
+      id: '3', min: '100', max: '1000',
     },
     {
-      id: '4', range: '1000 - 20000', min: '1000', max: '20000',
+      id: '4', min: '1000', max: '20000',
     },
   ];
+
+  const coins = useSelector((state) => state.coinCounter);
 
   const dispatch = useDispatch();
 
@@ -28,7 +30,20 @@ const Home = () => {
 
   return (
     <div>
-      <p>Stats by price</p>
+      <div className="coins-category-box">
+        <i className="coin" />
+        <p className="coin-name-home">
+          Welcome to coinRate
+          |
+          Live Crypto Prices
+        </p>
+        <p className="coins-length">
+          {coins.length}
+          &nbsp;
+          Coins
+        </p>
+      </div>
+      <p className="coin-heading">Stats by price</p>
       <div className="category-grid">
         {categories.map((category) => (
           <CategoryBox

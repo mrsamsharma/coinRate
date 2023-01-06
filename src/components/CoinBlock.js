@@ -18,12 +18,12 @@ const CoinBlock = ({ coin }) => {
 
   return (
     <div className="coin-box">
-      <h1>{name}</h1>
+      <h1 className="coin-box-heading">{name}</h1>
       <div className="coin-price-wrapper">
-        <h2>
+        <h3>
           $
           {Number(current_price).toFixed(3)}
-        </h2>
+        </h3>
         <NavLink id={id} className="forward-btn-coin" to="/Detail" onClick={handleClick} />
       </div>
     </div>
