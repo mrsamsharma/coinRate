@@ -202,3 +202,22 @@ body {
   color: #fff;
   padding: 10px;
 }
+
+@media only screen and (min-width: 768px) {
+  .details-container h2 {
+    font-size: 24px;
+  }
+
+  .coin-name {
+    font-size: 24px;
+  }
+
+  .category-box {
+    border: 1px solid rgb(122, 59, 89);
+  }
+
+  .category-grid {
+    row-gap: 5px;
+    column-gap: 5px;
+  }
+}
