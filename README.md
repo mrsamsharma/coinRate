@@ -3,13 +3,14 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
   - [🚀 Live Demo](#live-demo)
+  -[📄 Presentation](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
+- [🔭 Key Features](#key-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -32,7 +33,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://)
+- [Live Demo Link](https://coinrate.onrender.com)
+
+## 📄 Presentation <a name="presentation"></a>
+
+- [Loom Link](https://www.loom.com/share/5372646389de489eb8a7da2b1f30938e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,11 +96,14 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+<!-- Key FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Key Features <a name="key-features"></a>
 
-- Will diplay crypto coins from API
+- Using an API from Coingecko
+- If the Change Percent is less than zero it is displayed in red otherwise it is displayed in green
+- Manually created categories
+- Dropdown menu options using unique method to filter and redirect to specific category 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +129,7 @@ If you like this project you can star it :)
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse
+I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design of this app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
